@@ -1,3 +1,15 @@
+# Wheeler dealer 
+
+- A user can load and see a list of items
+- Each item will be displayed with info (title, brand, size, price)
+- A user can like or unlike an item - displayed in notification component
+- A user can hide and unhide sold items
+
+
+--------------------------
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
