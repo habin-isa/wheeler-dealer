@@ -1,25 +1,37 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect } from "react";
+import * as S from './styles';
+import ProductItem from '../ProductItem';
+
 import { getProducts } from "../../services/products";
 
 const PageProductList = () => {
   const [productData, setProductData] = useState([]);
 
-  const loadProducts = useCallback(async () => {
+  const loadProducts = async () => {
     try {
       const response = await getProducts();
-      setProductData(response);
+      setProductData(response.data);
     } catch (error) {
       console.log("error fetching products");
     } finally {
       console.log("ran");
     }
+  };
+
+  useEffect(() => {
+    if (productData.length === 0) {
+      loadProducts();
+    }
   }, [productData]);
 
+  const renderedProducts = productData.map((product, i) => (
+      <ProductItem key={i} product={product} />
+  ));
+
   return (
-    <div>
-      FERRARI
-      <button onClick={loadProducts}>LOAD</button>
-    </div>
+    <S.Wrapper>
+      {renderedProducts}
+    </S.Wrapper>
   );
 };
 
