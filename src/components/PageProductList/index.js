@@ -20,7 +20,7 @@ const PageProductList = () => {
     } catch (error) {
       console.log("error fetching products");
     } finally {
-      console.log("ran");
+      console.log("loadProducts called");
     }
   };
 

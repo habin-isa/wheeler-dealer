@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { func, object } from 'prop-types';
 import * as S from './styles';
 import emptyLike from '../../assets/empty-like.svg';
 import fullLike from '../../assets/full-like.svg';
@@ -47,7 +48,12 @@ const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
       </S.ProductInfo>
     </S.Wrapper>
   )
+};
 
+ProductItem.propTypes = {
+  product: object.isRequired,
+  handleLikeCount: func,
+  handleLikeClick: func
 };
 
 export default ProductItem;

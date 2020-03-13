@@ -10,6 +10,7 @@
     "jest": "^25.1.0",
     "jest-styled-components": "^7.0.0",
     "prettier-quick": "^0.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",

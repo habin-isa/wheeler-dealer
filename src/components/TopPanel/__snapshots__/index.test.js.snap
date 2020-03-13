@@ -2,22 +2,30 @@
 
 exports[`Top Panel should render 1`] = `
 <div
-  class="sc-AxjAm fnvuNC"
+  class="sc-AxjAm fMYzc"
 >
-  <div>
+  <div
+    class="sc-AxirZ dqVvws"
+  >
     5
      Results
   </div>
-  <button>
+  <button
+    class="sc-AxhUy iJJDLQ"
+  >
     Hide sold items
   </button>
   <div>
-    <img
-      class="sc-AxirZ gxddst"
-      src="full-like.svg"
-    />
-     
-    3
+    <div
+      class="sc-AxiKw hQHhPG"
+    >
+      <img
+        class="sc-AxhCb dKRPPF"
+        src="full-like.svg"
+      />
+       
+      3
+    </div>
   </div>
 </div>
 `;

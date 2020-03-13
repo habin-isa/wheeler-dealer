@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="header-image" src={titleImg}/>
-        <img className="subtitle-image" src={subtitleImg}/>
+        <img className="header-image" src={titleImg} alt="title-img" />
+        <img className="subtitle-image" src={subtitleImg} alt="subtitle-img" />
         <PageProductList />
       </header>
     </div>

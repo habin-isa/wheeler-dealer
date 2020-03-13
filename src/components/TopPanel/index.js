@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { func, number, bool, string } from 'prop-types';
 import * as S from './styles';
 
 import likeIcon from '../../assets/full-like.svg'
@@ -36,5 +37,14 @@ const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, lik
     </S.Wrapper>
   )
 };
+
+TopPanel.propTypes = {
+  productCount: number,
+  likeCount: number,
+  handleShowClick: func,
+  hideSoldItems: bool,
+  likedItemTitle: string,
+  deleteNotification: func
+}
 
 export default TopPanel;
