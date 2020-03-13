@@ -3,7 +3,7 @@ import * as S from './styles';
 import emptyLike from '../../assets/empty-like.svg';
 import fullLike from '../../assets/full-like.svg';
 
-const ProductItem = ({ product, handleLikeCount }) => {
+const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
   const [itemLiked, setItemLiked] = useState(false);
   const productSold = product.sold;
 
@@ -14,16 +14,22 @@ const ProductItem = ({ product, handleLikeCount }) => {
     } else {
       handleLikeCount(1);
     }
-  }
+  };
 
   return (
     <S.Wrapper>
       <S.ImgContainer>
         {
           itemLiked ? (
-            <S.Heart src={fullLike} onClick={handleLikeClick} />
+            <S.Heart src={fullLike} onClick={() => {
+              handleLikeClick();
+              handleLikeTitle('');
+            }} />
           ) : (
-            <S.Heart src={emptyLike} onClick={handleLikeClick} />
+            <S.Heart src={emptyLike} onClick={() => {
+              handleLikeClick();
+              handleLikeTitle(product.title);
+            }} />
           )
         }
           <S.ProductImg style={{ opacity: (productSold ? '0.2' : '1') }} src={product.img} alt={product.title} />
@@ -45,11 +51,3 @@ const ProductItem = ({ product, handleLikeCount }) => {
 };
 
 export default ProductItem;
-
-// {
-//   itemLiked ? (
-//     <S.Heart src={fullLike} onClick={() => setItemLiked(!itemLiked)} />
-//   ) : (
-//     <S.Heart src={emptyLike} onClick={() => setItemLiked(!itemLiked)} />
-//   )
-// }

@@ -43,12 +43,3 @@ export const ProductInfo = styled.div`
   width: 100%;
   padding: 10px;
 `;
-
-export const ImgLayer = styled.div`
-  background-color: rgba(248, 247, 216, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
