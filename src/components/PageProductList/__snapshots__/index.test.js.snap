@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageProductList should render 1`] = `
+<div>
+  <div
+    class="sc-AxirZ cdrpSE"
+  >
+    <div>
+       Results
+    </div>
+    <div>
+      Notification
+    </div>
+  </div>
+  <div
+    class="sc-AxjAm kdAMH"
+  />
+</div>
+`;
