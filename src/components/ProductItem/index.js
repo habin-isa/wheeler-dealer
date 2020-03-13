@@ -22,18 +22,28 @@ const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
       <S.ImgContainer>
         {
           itemLiked ? (
-            <S.Heart src={fullLike} onClick={() => {
-              handleLikeClick();
-              handleLikeTitle('');
-            }} />
+            <S.Heart 
+              src={fullLike} 
+              onClick={() => {
+                handleLikeClick();
+                handleLikeTitle('');
+              }}
+            />
           ) : (
-            <S.Heart src={emptyLike} onClick={() => {
-              handleLikeClick();
-              handleLikeTitle(product.title);
-            }} />
+            <S.Heart 
+              src={emptyLike} 
+              onClick={() => {
+                handleLikeClick();
+                handleLikeTitle(product.title);
+              }} 
+            />
           )
         }
-          <S.ProductImg style={{ opacity: (productSold ? '0.2' : '1') }} src={product.img} alt={product.title} />
+          <S.ProductImg 
+            style={{ opacity: (productSold ? '0.2' : '1') }} 
+            src={product.img} 
+            alt={product.title}
+          />
           {
             productSold ? (
               <S.SoldCaption><b>SOLD</b></S.SoldCaption>

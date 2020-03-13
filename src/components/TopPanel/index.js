@@ -27,10 +27,14 @@ const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, lik
         )
       }
       <div>
-        <S.HeartContainer><S.Heart src={likeIcon} /> {likeCount}</S.HeartContainer>
+        <S.HeartContainer>
+          <S.Heart src={likeIcon} /> {likeCount}
+        </S.HeartContainer>
         {
           likedItemTitle && (
-            <S.Notification onClick={deleteNotification}>⤬ New like: {likedItemTitle}</S.Notification>
+            <S.Notification onClick={deleteNotification}>
+              ⤬ New like: {likedItemTitle}
+            </S.Notification>
           )
         }
       </div>

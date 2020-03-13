@@ -55,13 +55,25 @@ const PageProductList = () => {
   }, [productData]);
 
   const renderedAllProducts = productData.map((product, i) => (
-    <ProductItem key={i} product={product} handleLikeCount={handleLikeCount} handleLikeTitle={handleLikeTitle} />
+    <ProductItem 
+      key={i} 
+      product={product} 
+      handleLikeCount={handleLikeCount} 
+      handleLikeTitle={handleLikeTitle}
+    />
   ));
 
 
   return (
     <div>
-      <TopPanel productCount={productDataCount} likeCount={likeCount} handleShowClick={handleShowClick} hideSoldItems={hideSoldItems} likedItemTitle={likedItemTitle} deleteNotification={deleteNotification} />
+      <TopPanel 
+        productCount={productDataCount} 
+        likeCount={likeCount} 
+        handleShowClick={handleShowClick} 
+        hideSoldItems={hideSoldItems} 
+        likedItemTitle={likedItemTitle} 
+        deleteNotification={deleteNotification}
+      />
       <S.ProductContainer>
         {renderedAllProducts}
       </S.ProductContainer>
