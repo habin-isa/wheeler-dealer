@@ -37,4 +37,5 @@ export const Button = styled.button`
 export const Notification = styled.div`
   position: absolute;
   cursor: pointer;
+  font-size: 14px;
 `;
