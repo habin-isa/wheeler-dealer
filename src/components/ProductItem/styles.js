@@ -9,31 +9,31 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: relative;
+  z-index: 9999;
 `;
 
 export const Heart = styled.img`
-  width: 40px;
   position: absolute;
+  width: 40px;
   padding: 20px;
-  &:hover {
-    opacity: 0.6;
-    cursor: pointer;
-  }
+  z-index: 9999;
+  cursor: pointer;
 `;
 
 export const ProductImg = styled.img`
   height: 400px;
   width: auto;
-  position: relative;
 `;
 
 export const SoldCaption = styled.div`
   position: absolute;
   font-size: 30px;
+  left: 45%;
+  top: 40%;
 `;
 
 export const ProductInfo = styled.div`
@@ -42,4 +42,13 @@ export const ProductInfo = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 10px;
+`;
+
+export const ImgLayer = styled.div`
+  background-color: rgba(248, 247, 216, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `;

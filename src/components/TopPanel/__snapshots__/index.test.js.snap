@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Top Panel should render 1`] = `
+<div
+  class="sc-AxjAm fnvuNC"
+>
+  <div>
+    5
+     Results
+  </div>
+  <button>
+    Hide sold items
+  </button>
+  <div>
+    <img
+      class="sc-AxirZ gxddst"
+      src="full-like.svg"
+    />
+     
+    3
+  </div>
+</div>
+`;

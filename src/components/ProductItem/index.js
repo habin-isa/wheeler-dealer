@@ -3,32 +3,41 @@ import * as S from './styles';
 import emptyLike from '../../assets/empty-like.svg';
 import fullLike from '../../assets/full-like.svg';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, handleLikeCount }) => {
   const [itemLiked, setItemLiked] = useState(false);
   const productSold = product.sold;
+
+  const handleLikeClick = () => {
+    setItemLiked(!itemLiked);
+    if (itemLiked) {
+      handleLikeCount(-1);
+    } else {
+      handleLikeCount(1);
+    }
+  }
 
   return (
     <S.Wrapper>
       <S.ImgContainer>
         {
-          itemLiked === false ? (
-            <S.Heart src={emptyLike} onClick={() => setItemLiked(!itemLiked)} />
+          itemLiked ? (
+            <S.Heart src={fullLike} onClick={handleLikeClick} />
           ) : (
-            <S.Heart src={fullLike} onClick={() => setItemLiked(!itemLiked)} />
+            <S.Heart src={emptyLike} onClick={handleLikeClick} />
           )
         }
           <S.ProductImg style={{ opacity: (productSold ? '0.2' : '1') }} src={product.img} alt={product.title} />
-      </S.ImgContainer>
-      {
+          {
             productSold ? (
-              <S.SoldCaption>Sold</S.SoldCaption>
+              <S.SoldCaption><b>SOLD</b></S.SoldCaption>
             ) : ''
           }
+      </S.ImgContainer>
       <S.ProductInfo>
         <div><b>{product.title}</b></div>
         <div>Brand: {product.brand}</div>
         <div>Size: {product.size}</div>
-        <div>Price: £{product.price}</div>
+        <div>Price: <b>£{product.price}</b></div>
       </S.ProductInfo>
     </S.Wrapper>
   )
@@ -36,3 +45,11 @@ const ProductItem = ({ product }) => {
 };
 
 export default ProductItem;
+
+// {
+//   itemLiked ? (
+//     <S.Heart src={fullLike} onClick={() => setItemLiked(!itemLiked)} />
+//   ) : (
+//     <S.Heart src={emptyLike} onClick={() => setItemLiked(!itemLiked)} />
+//   )
+// }

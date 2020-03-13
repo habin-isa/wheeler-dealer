@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Item should render 1`] = `
+<div
+  class="sc-AxjAm jTjmSu"
+>
+  <div
+    class="sc-AxirZ eWRWoQ"
+  >
+    <img
+      class="sc-AxiKw jkbSeY"
+      src="empty-like.svg"
+    />
+    <img
+      class="sc-AxhCb dxDRS"
+      style="opacity: 0.2;"
+    />
+    <div
+      class="sc-AxhUy wEiDW"
+    >
+      <b>
+        SOLD
+      </b>
+    </div>
+  </div>
+  <div
+    class="sc-AxgMl kpvDqU"
+  >
+    <div>
+      <b />
+    </div>
+    <div>
+      Brand: 
+    </div>
+    <div>
+      Size: 
+    </div>
+    <div>
+      Price: 
+      <b>
+        £
+      </b>
+    </div>
+  </div>
+</div>
+`;

@@ -3,13 +3,21 @@
 exports[`PageProductList should render 1`] = `
 <div>
   <div
-    class="sc-AxirZ cdrpSE"
+    class="sc-AxirZ dmCnmV"
   >
     <div>
        Results
     </div>
+    <button>
+      Hide sold items
+    </button>
     <div>
-      Notification
+      <img
+        class="sc-AxiKw koNhYh"
+        src="full-like.svg"
+      />
+       
+      0
     </div>
   </div>
   <div
