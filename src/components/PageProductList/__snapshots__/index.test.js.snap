@@ -15,7 +15,9 @@ exports[`PageProductList should render 1`] = `
     >
       Hide sold items
     </button>
-    <div>
+    <div
+      class="sc-AxheI cDQGzf"
+    >
       <div
         class="sc-AxhCb kESVlm"
       >
@@ -26,7 +28,9 @@ exports[`PageProductList should render 1`] = `
          
         0
       </div>
-      
+      <div
+        class="sc-Axmtr guLlwY"
+      />
     </div>
   </div>
   <div

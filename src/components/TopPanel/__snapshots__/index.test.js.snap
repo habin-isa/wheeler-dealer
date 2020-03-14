@@ -15,7 +15,9 @@ exports[`Top Panel should render 1`] = `
   >
     Hide sold items
   </button>
-  <div>
+  <div
+    class="sc-AxgMl ecWowd"
+  >
     <div
       class="sc-AxiKw hQHhPG"
     >
@@ -25,6 +27,28 @@ exports[`Top Panel should render 1`] = `
       />
        
       3
+    </div>
+    <div
+      class="sc-AxheI hBERmv"
+    >
+      <li
+        class="sc-Axmtr eKrwkX"
+      >
+        ⤬ New like: 
+        Man City shirt
+      </li>
+      <li
+        class="sc-Axmtr eKrwkX"
+      >
+        ⤬ New like: 
+        Buberry slippers
+      </li>
+      <li
+        class="sc-Axmtr eKrwkX"
+      >
+        ⤬ New like: 
+        Rapha top
+      </li>
     </div>
   </div>
 </div>

@@ -12,6 +12,7 @@ const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
     setItemLiked(!itemLiked);
     if (itemLiked) {
       handleLikeCount(-1);
+      console.log('rah')
     } else {
       handleLikeCount(1);
     }
@@ -26,7 +27,7 @@ const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
               src={fullLike} 
               onClick={() => {
                 handleLikeClick();
-                handleLikeTitle('');
+                handleLikeTitle('', product.id);
               }}
             />
           ) : (
@@ -34,7 +35,7 @@ const ProductItem = ({ product, handleLikeCount, handleLikeTitle }) => {
               src={emptyLike} 
               onClick={() => {
                 handleLikeClick();
-                handleLikeTitle(product.title);
+                handleLikeTitle(product.title, product.id);
               }} 
             />
           )

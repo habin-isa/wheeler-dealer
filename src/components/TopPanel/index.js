@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { func, number, bool, string } from 'prop-types';
+import { func, number, bool, array } from 'prop-types';
 import * as S from './styles';
+import Notification from '../Notification';
 
 import likeIcon from '../../assets/full-like.svg'
 
-const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, likedItemTitle, deleteNotification }) => {
+const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, deleteLike, likedList }) => {
   const [showSoldButton, setShowSoldButton] = useState(false);
   
   const handleClick = () => {
@@ -14,7 +15,7 @@ const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, lik
     } else {
       handleShowClick(true);
     }
-  }
+	};
 
   return (
     <S.Wrapper>
@@ -26,18 +27,12 @@ const TopPanel = ({ productCount, likeCount, handleShowClick, hideSoldItems, lik
           <S.Button onClick={handleClick}>Show all items</S.Button>
         )
       }
-      <div>
+      <S.NotificationWrapper>
         <S.HeartContainer>
           <S.Heart src={likeIcon} /> {likeCount}
         </S.HeartContainer>
-        {
-          likedItemTitle && (
-            <S.Notification onClick={deleteNotification}>
-              ⤬ New like: {likedItemTitle}
-            </S.Notification>
-          )
-        }
-      </div>
+        <Notification likedList={likedList} deleteLike={deleteLike} />
+      </S.NotificationWrapper>
     </S.Wrapper>
   )
 };
@@ -47,8 +42,8 @@ TopPanel.propTypes = {
   likeCount: number,
   handleShowClick: func,
   hideSoldItems: bool,
-  likedItemTitle: string,
-  deleteNotification: func
+  deleteLike: func,
+  likedList: array
 }
 
 export default TopPanel;

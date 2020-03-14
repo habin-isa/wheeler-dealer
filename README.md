@@ -23,6 +23,7 @@ https://wheeler-dealer-dot.herokuapp.com/
 - \$ cd wheeler-dealer
 - \$ yarn
 - \$ yarn start
+(Open up http://localhost:8080/ in browser)
 - \$ yarn test
 
 ### Tech

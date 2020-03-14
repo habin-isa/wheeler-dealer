@@ -34,8 +34,6 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const Notification = styled.div`
-  position: absolute;
-  cursor: pointer;
-  font-size: 14px;
+export const NotificationWrapper = styled.div`
+  position: relative;
 `;

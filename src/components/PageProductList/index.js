@@ -10,7 +10,7 @@ const PageProductList = () => {
   const [productDataCount, setProductDataCount] = useState();
   const [likeCount, setLikeCount] = useState(0);
   const [hideSoldItems, setHideSoldItems] = useState(false);
-  const [likedItemTitle, setLikedItemTitle] = useState('');
+  const [likedList, setLikedList] = useState([]);
 
   const loadProducts = async () => {
     try {
@@ -28,13 +28,17 @@ const PageProductList = () => {
     setLikeCount(likeCount + val);
   };
 
-  const handleLikeTitle = (title) => {
-    setLikedItemTitle(title);
+  const handleLikeTitle = (title, id) => {
+    const trimmedLikeTitle = title.trim();
+    if (trimmedLikeTitle.length > 0) {
+      setLikedList([...likedList, trimmedLikeTitle]);
+    }
   };
 
-  const deleteNotification = () => {
-    handleLikeTitle('');
-  }
+  const deleteLike = (likeIndex) => {
+    const updatedLikeList = likedList.filter((_, i) => i !== likeIndex);
+    setLikedList(updatedLikeList);
+  };
 
   const handleShowClick = (val) => {
     if (val === false) {
@@ -71,8 +75,8 @@ const PageProductList = () => {
         likeCount={likeCount} 
         handleShowClick={handleShowClick} 
         hideSoldItems={hideSoldItems} 
-        likedItemTitle={likedItemTitle} 
-        deleteNotification={deleteNotification}
+        likedList={likedList}
+        deleteLike={deleteLike}
       />
       <S.ProductContainer>
         {renderedAllProducts}

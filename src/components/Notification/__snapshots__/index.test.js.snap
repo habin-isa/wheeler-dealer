@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification should render 1`] = `
+<div
+  class="sc-AxjAm cjYHtl"
+>
+  <li
+    class="sc-AxirZ lgUHZh"
+  >
+    ⤬ New like: 
+    Man City shirt
+  </li>
+  <li
+    class="sc-AxirZ lgUHZh"
+  >
+    ⤬ New like: 
+    Buberry slippers
+  </li>
+  <li
+    class="sc-AxirZ lgUHZh"
+  >
+    ⤬ New like: 
+    Rapha top
+  </li>
+</div>
+`;
